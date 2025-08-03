@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muhammad Yahya Khokhar - Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', serif;
+    }
+
+    body {
+      background-color: #eaeaea;
+      color: #333;
+      transition: background-color 0.5s ease;
+    }
+
+    .welcome-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #1a1a1a, #4d4d4d);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      text-align: center;
+      cursor: pointer;
+      animation: fadeIn 1s;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .welcome-screen h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: slideIn 1s;
+    }
+
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .welcome-screen p {
+      font-size: 1.2rem;
+      color: #aaa;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px 0;
+      position: relative;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    }
+
+    .header-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .logo {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      height: 80px;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover {
+      transform: translateY(-50%) scale(1.1);
+    }
+
+    .header-text {
+      text-align: center;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 2rem;
+      animation: fadeIn 1s;
+    }
+
+    .header-text p {
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+    .profile {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .profile img {
+      border-radius: 50%;
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border: 4px solid #444;
+      transition: transform 0.3s;
+    }
+
+    .profile img:hover {
+      transform: scale(1.05);
+    }
+
+    .profile h2 {
+      margin-top: 15px;
+      font-size: 1.8rem;
+    }
+
+    .skills {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .skills h3 {
+      margin-bottom: 10px;
+    }
+
+    .skills ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skills li {
+      background-color: #ccc;
+      color: #000;
+      padding: 8px 12px;
+      border-radius: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .skills li:hover {
+      background-color: #333;
+      color: white;
+    }
+
+    .projects {
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .project {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+
+    .project:hover {
+      transform: translateY(-5px);
+    }
+
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 15px;
+      object-fit: contain;
+    }
+
+    .project h3 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      display: inline-block;
+      margin-top: 10px;
+      background: #333;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .project a:hover {
+      background: #555;
+    }
+
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: #0af;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="welcome-screen" id="welcome">
+    <img src="logo2.png" alt="Logo" style="width:250px; height:200px; margin-bottom:20px;" />
+    <h1>Welcome to Portfolio</h1>
+    <p>Click anywhere to continue</p>
+  </div>
+
+  <header>
+    <div class="header-container">
+      <img src="logo2.png" alt="Logo" class="logo" />
+      <div class="header-text">
+        <h1>Muhammad Yahya Khokhar</h1>
+        <p>| Power BI Developer | SQL Developer | Data Analyst |</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="profile">
+    <img src="YAHYA.jpeg" alt="Muhammad Yahya Khokhar" />
+    <h2>Skills</h2>
+  </section>
+
+  <section class="skills">
+    <ul>
+      <li>Power BI</li>
+      <li>DAX</li>
+      <li>Excel</li>
+      <li>SQL</li>
+      <li>Data Modeling</li>
+      <li>Data Cleaning</li>
+      <li>Data Visualization</li>
+      <li>Data Analysis</li>
+    </ul>
+  </section>
+
+  <section class="projects">
+    
+
+
+    <div class="project">
+      <h3 style="font-size:2rem;text-align: center;"> Daily Sales Backlog Report</h3>
+      <p><strong>Data Source:</strong> Excel</p>
+      <p><strong>Technologies:</strong> Power BI</p>
+      <p><strong>Description:</strong></p>
+      <p style="font-size: 0.85rem;">Developed a high-impact Power BI dashboard leveraging a robust star schema data model from Excel to provide real-time, granular data analysis of sales backlog. This project was developed with a focus on German language data and reporting standards. This solution delivers critical insights into backlog volume, order cycle times, and aging, enabling proactive risk mitigation and optimized resource allocation. Key features include a dynamic "Aging Analysis" for temporal decomposition and dimensional breakdowns for targeted strategic interventions. This directly contributes to enhanced operational efficiency and improved order fulfillment rates.</p>
+      <img src="1.png" alt="Daily Sales Backlog Report"/>
+      <a href="https://drive.google.com/file/d/19kvrD2TTZxC7JL51ejU31-ahHcESy2B4/view?usp=drive_link" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3 style="font-size:2rem;text-align: center;">Sales and Order Performance Dashboard</h3>
+      <p><strong>Data Source:</strong> Excel</p>
+      <p><strong>Technologies:</strong> Power BI</p>
+      <p><strong>Description:</strong></p>
+      <p style="font-size: 0.85rem;">Engineered a comprehensive Power BI executive dashboard, built on an advanced star/snowflake data model from Excel, to drive strategic sales and order performance optimization. Through sophisticated data analysis and time intelligence functions, it provides longitudinal trend analysis across key metrics, empowering leadership with critical insights for revenue acceleration. A crucial ratio analysis identifies fulfillment bottlenecks, while integrated value/quantity analysis and contextual filters facilitate data-driven decision-making and performance benchmarking.</p>
+      <img src="2.png" alt="Sales and Order Performance Dashboard"/>
+      <a href="https://drive.google.com/file/d/1N165dy9LncyLquS4zIZpRS3kJ7I01C5d/view?usp=drive_link" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3 style="font-size:2rem;text-align: center;">Invoice Data and Inventory Overview</h3>
+      <p><strong>Data Source:</strong> Excel</p>
+      <p><strong>Technologies:</strong> Power BI</p>
+      <p><strong>Description:</strong></p>
+      <p style="font-size: 0.85rem;">Implemented a precise Power BI report for transactional and inventory data analysis, supported by a meticulously designed line-item data model from Excel. This solution incorporates a robust multi-currency conversion pipeline, ensuring financial data integrity and consistency. The data analysis provides deep, actionable visibility into individual invoice attributes and critical inventory management metrics, enabling proactive stock control and significant cost reduction opportunities. Interactive controls facilitate rapid, precise data filtration for operational excellence.</p>
+      <img src="3.png" alt="Invoice and Inventory Dashboard"/>
+      <a href="https://drive.google.com/file/d/1_slZHLkBMDulm-k3dg9weu1d_e47_w8z/view?usp=drive_link" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3 style="font-size:2rem;text-align: center;">Company Sales Dashboard</h3>
+      <p><strong>Data Source:</strong> Excel</p>
+      <p><strong>Technologies:</strong> Power BI</p>
+      <p><strong>Description:</strong></p>
+      <p style="font-size: 0.85rem;">Created a powerful Power BI Sales Performance Analytics Hub, utilizing an Excel-sourced data model, to deliver actionable market intelligence. This dashboard's data analysis capabilities provide rapid insights into profit maximization and sales volume drivers, identifying top-performing products and regions. Through dynamic temporal and product segmentation, it empowers strategic planning and revenue acceleration initiatives. Integrated trend and cost analysis further supports data-driven decision-making, optimizing sales strategies and resource allocation.</p>
+      <img src="4.png" alt="Company Sales Dashboard"/>
+      <a href="https://drive.google.com/file/d/1JO0UhPOUaZ2EkDy6QNVECXp0XyQWOFHl/view?usp=drive_link" target="_blank">View Project</a>
+    </div>
+
+    <div class="project">
+      <h3 style="font-size:2rem;text-align: center;">Employee Information Dashboard</h3>
+      <p><strong>Data Source:</strong> SQL</p>
+      <p><strong>Technologies:</strong> Power BI</p>
+      <p><strong>Description:</strong></p>
+      <p style="font-size: 0.85rem;">Designed and deployed a robust Power BI Human Resources Data Visualization platform, underpinned by a scalable SQL-extracted data model, ensuring high data integrity. The data analysis provides critical HR metrics, including comprehensive salary benchmarking, headcount, and departmental cardinality, informing strategic talent management. Interactive filtration capabilities enable granular insights into compensation distribution and organizational structure, facilitating data-driven decisions for resource optimization and workforce planning.</p>
+      <img src="5.png" alt="Employee Information Dashboard"/>
+      <a href="https://drive.google.com/file/d/1ALTSCzgVmI291A8NIeEmAeV9F6xaoyjC/view?usp=drive_link" target="_blank">View Project</a>
+    </div>
+  </section>
+  <section style="padding: 40px 20px; background-color: white; color: black; text-align: center;">
+  <h2>Contact Me</h2>
+<form action="https://formsubmit.co/muhammadyahyakhokhar12@gmail.com" method="POST" style="max-width: 500px; margin: auto; text-align: left;">
+    
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" required 
+      style="width: 100%; padding: 10px; margin-bottom: 15px; 
+             border: 1px solid #888; border-radius: 5px; 
+             background-color: #333; color: #fff;"><br>
+
+    <label for="email">Email:</label><br>
+    <input type="email" id="email" name="email" required 
+      style="width: 100%; padding: 10px; margin-bottom: 15px; 
+             border: 1px solid #888; border-radius: 5px; 
+             background-color: #333; color: #fff;"><br>
+
+    <label for="message">Message:</label><br>
+    <textarea id="message" name="message" rows="5" required 
+      style="width: 100%; padding: 10px; border: 1px solid #888; 
+             border-radius: 5px; background-color: #333; color: #fff;"></textarea><br><br>
+
+    <button type="submit" 
+      style="background-color: #222; color: #fff; 
+             padding: 10px 20px; border: none; 
+             border-radius: 5px; cursor: pointer;">Send</button>
+
+      </form>
+</section>
+
+  <footer>
+    <p>📧 Email: <a href="mailto:muhammadyahyakhokhar12@gmail.com">yahyakhokhar12@gmail.com</a><br>
+       📞 Contact: +92-300-3804122<br>
+       🔗 LinkedIn: <a href="https://www.linkedin.com/in/muhammad-yahya-khokhar-aa2b4535b" target="_blank">linkedin.com/in/muhammad-yahya-khokhar-aa2b4535b</a><br>
+       &copy; 2025 Muhammad Yahya Khokhar</p>
+  </footer>
+
+  <script>
+    document.getElementById("welcome").addEventListener("click", function () {
+      this.style.display = "none";
+    });
+  </script>
+</body>
+</html>
+<script>
+  document.getElementById("welcome").addEventListener("click", function () {
+    this.style.display = "none";
+  });
+
+  // Insert centered "Projects" heading dynamically
+  const projectsSection = document.querySelector(".projects");
+  const heading = document.createElement("h2");
+  heading.textContent = "Projects";
+  heading.style.textAlign = "center";
+  heading.style.marginBottom = "20px";
+  projectsSection.insertBefore(heading, projectsSection.firstChild);
+</script>
