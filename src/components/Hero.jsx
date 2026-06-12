@@ -1,4 +1,8 @@
-import Hero from '../components/Hero';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Download, ArrowRight } from 'lucide-react';
+import TypingText from './TypingText';
+import { roles } from '../data/siteData';
 
 export default function Hero() {
   return (
