@@ -25,11 +25,7 @@ export default function Projects() {
       <div className="section-shell">
         <SectionHeading eyebrow="Projects" title="Filterable portfolio showcase." description="Search, filter, and inspect details in premium modal layouts." />
         <div className="mt-8 grid gap-4 md:grid-cols-[1fr_auto]">
-<<<<<<< HEAD
           <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search projects..." className="rounded-2xl border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/35" />
-=======
-          <input value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search projects..." className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder:text-white/35" />
->>>>>>> 8269a60d1630ea7198a52f324d52f2685acf7a32
           <div className="flex flex-wrap gap-2">
             {categories.map((item) => (
               <button key={item} onClick={() => setFilter(item)} className={`rounded-full px-4 py-2 text-sm ${filter === item ? 'bg-gold-400 text-ink-950' : 'border border-white/10 bg-white/5 text-white/75'}`}>

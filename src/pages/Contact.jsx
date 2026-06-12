@@ -44,35 +44,20 @@ export default function Contact() {
           <div className="grid gap-5">
             <div>
               <label className="mb-2 block text-sm text-white/70">Name</label>
-<<<<<<< HEAD
-              <input {...register('name', { required: 'Name is required', minLength: 2 })} className="w-full rounded-2xl border-white/10 bg-white/5 px-4 py-3 text-white" />
-=======
-              <input {...register('name', { required: 'Name is required', minLength: 2 })} className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white" />
->>>>>>> 8269a60d1630ea7198a52f324d52f2685acf7a32
+              <input {...register('name', { required: 'Name is required', minLength: { value: 2, message: 'Enter a valid name' } })} className="w-full rounded-2xl border-white/10 bg-white/5 px-4 py-3 text-white" />
               {errors.name && <p className="mt-2 text-sm text-red-400">{errors.name.message || 'Enter a valid name'}</p>}
             </div>
             <div>
               <label className="mb-2 block text-sm text-white/70">Email</label>
-<<<<<<< HEAD
               <input {...register('email', { required: 'Email is required' })} className="w-full rounded-2xl border-white/10 bg-white/5 px-4 py-3 text-white" />
-=======
-              <input {...register('email', { required: 'Email is required' })} className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white" />
->>>>>>> 8269a60d1630ea7198a52f324d52f2685acf7a32
               {errors.email && <p className="mt-2 text-sm text-red-400">{errors.email.message}</p>}
             </div>
             <div>
               <label className="mb-2 block text-sm text-white/70">Message</label>
-<<<<<<< HEAD
               <textarea {...register('message', { required: 'Message is required', minLength: 10 })} rows={6} className="w-full rounded-2xl border-white/10 bg-white/5 px-4 py-3 text-white" />
               {errors.message && <p className="mt-2 text-sm text-red-400">{errors.message.message || 'Enter at least 10 characters'}</p>}
             </div>
             <button disabled={isSubmitting} className="rounded-full bg-gold-400 px-6 py-3 font-medium text-ink-950">
-=======
-              <textarea {...register('message', { required: 'Message is required', minLength: 10 })} rows={6} className="w-full rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-white" />
-              {errors.message && <p className="mt-2 text-sm text-red-400">{errors.message.message || 'Enter at least 10 characters'}</p>}
-            </div>
-            <button disabled={isSubmitting} className="rounded-full bg-gold-400 px-6 py-3 font-medium text-ink-950 transition hover:scale-[1.02] disabled:opacity-50">
->>>>>>> 8269a60d1630ea7198a52f324d52f2685acf7a32
               {isSubmitting ? 'Sending...' : 'Send Message'}
             </button>
           </div>

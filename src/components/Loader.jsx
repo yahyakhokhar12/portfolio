@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Loader({ fullScreen = false }) {
   const wrapper = fullScreen ? 'fixed inset-0 z-[100] bg-ink-950' : 'w-full py-16';
   return (

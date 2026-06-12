@@ -1,4 +1,4 @@
-import SectionShell from '../components/SectionShell';
+﻿import SectionShell from '../components/SectionShell';
 import SectionHeading from '../components/SectionHeading';
 import { stats, timeline } from '../data/siteData';
 
@@ -10,11 +10,7 @@ export default function About() {
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="glass-card rounded-3xl p-8 text-white/70">
             <p className="leading-8">
-<<<<<<< HEAD
-              I’m Muhammad Yahya Khokhar, a portfolio-focused builder working across business intelligence, ML/AI development, full-stack products, and modern web experiences. I enjoy turning messy data and vague ideas into clear systems that feel polished, useful, and trustworthy.
-=======
               I'm Muhammad Yahya Khokhar, a portfolio-focused builder working across business intelligence, ML/AI development, full-stack products, and modern web experiences. I enjoy turning messy data and vague ideas into clear systems that feel polished, useful, and trustworthy.
->>>>>>> 8269a60d1630ea7198a52f324d52f2685acf7a32
             </p>
             <div className="mt-8 space-y-4">
               {timeline.map((item) => (
