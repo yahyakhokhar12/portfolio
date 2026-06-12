@@ -99,6 +99,40 @@ export default function Home() {
           </div>
         </div>
       </SectionShell>
+
+      <SectionShell>
+        <div className="section-shell">
+          <SectionHeading eyebrow="Testimonials" title="What clients and collaborators say." align="center" />
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.name} className="glass-card rounded-3xl p-6">
+                <p className="text-white/70 italic">" {testimonial.quote} "</p>
+                <div className="mt-4 border-t border-white/10 pt-4">
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gold-400">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionShell>
+
+      <SectionShell className="bg-white/[0.02]">
+        <div className="section-shell">
+          <SectionHeading eyebrow="FAQ" title="Common questions answered." align="center" />
+          <div className="mt-10 max-w-3xl mx-auto">
+            <FAQ
+              items={[
+                { q: 'How do you approach new projects?', a: 'I start with discovery and strategy, understand your goals, and deliver polished work that moves the needle.' },
+                { q: 'What tech stack do you work with?', a: 'Power BI, Python, JavaScript/React, Node.js, SQL, MongoDB, and modern ML/AI frameworks.' },
+                { q: 'What are your rates?', a: 'Rates are project-based and scale with scope. Happy to discuss your budget and timeline.' },
+                { q: 'Do you offer ongoing support?', a: 'Yes, I offer retainer arrangements for long-term partnerships and continuous optimization.' }
+              ]}
+            />
+          </div>
+           </div>
+
+      </SectionShell>
     </>
   );
 }

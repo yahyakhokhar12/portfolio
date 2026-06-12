@@ -9,8 +9,7 @@ export default function About() {
         <SectionHeading eyebrow="About" title="Professional bio, journey, and ambitions." />
         <div className="mt-10 grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
           <div className="glass-card rounded-3xl p-8 text-white/70">
-            <p className="leading-8">
-              I'm Muhammad Yahya Khokhar, a portfolio-focused builder working across business intelligence, ML/AI development, full-stack products, and modern web experiences. I enjoy turning messy data and vague ideas into clear systems that feel polished, useful, and trustworthy.
+            <p className="leading-8">  I'm Muhammad Yahya Khokhar, a portfolio-focused builder working across business intelligence, ML/AI development, full-stack products, and modern web experiences. I enjoy turning messy data and vague ideas into clear systems that feel polished, useful, and trustworthy.
             </p>
             <div className="mt-8 space-y-4">
               {timeline.map((item) => (
