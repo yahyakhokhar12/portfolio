@@ -48,16 +48,28 @@ export default function Home() {
       <SectionShell className="bg-white/[0.02]">
         <div className="section-shell">
           <SectionHeading eyebrow="Services" title="Premium service offerings" />
+<<<<<<< HEAD
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {services.map((service) => (
               <div key={service.title} className="glass-card rounded-3xl p-6">
                 <h3 className="text-xl font-semibold">{service.title}</h3>
                 <ul className="mt-4 space-y-2 text-sm text-white/65">
                   {service.items.map((item) => <li key={item}>• {item}</li>)}
+=======
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {services.map((service) => (
+              <div key={service.title} className="glass-card rounded-3xl p-6 transition hover:-translate-y-1">
+                <h3 className="text-xl font-semibold">{service.title}</h3>
+                <ul className="mt-4 space-y-2 text-sm text-white/70">
+                  {service.items.map((item) => (
+                    <li key={item}>✓ {item}</li>
+                  ))}
+>>>>>>> 8269a60d1630ea7198a52f324d52f2685acf7a32
                 </ul>
               </div>
             ))}
           </div>
+<<<<<<< HEAD
         </div>
       </SectionShell>
 
@@ -91,6 +103,46 @@ export default function Home() {
           <p className="text-sm uppercase tracking-[0.35em] text-gold-400">Contact CTA</p>
           <h2 className="mt-4 text-3xl font-semibold md:text-5xl">Have an idea worth building?</h2>
           <Link to="/contact" className="mt-8 inline-flex rounded-full bg-gold-400 px-6 py-3 font-medium text-ink-950">Let’s talk</Link>
+=======
+          <div className="mt-10 text-center">
+            <Link to="/services" className="inline-flex items-center gap-2 rounded-full bg-gold-400/15 border border-gold-400/30 px-6 py-3 font-medium text-gold-300 transition hover:border-gold-400/50">
+              View All Services →
+            </Link>
+          </div>
+        </div>
+      </SectionShell>
+
+      <SectionShell>
+        <div className="section-shell">
+          <SectionHeading eyebrow="Testimonials" title="What clients and collaborators say." align="center" />
+          <div className="mt-10 grid gap-6 md:grid-cols-3">
+            {testimonials.map((testimonial) => (
+              <div key={testimonial.name} className="glass-card rounded-3xl p-6">
+                <p className="text-white/70 italic">" {testimonial.quote} "</p>
+                <div className="mt-4 border-t border-white/10 pt-4">
+                  <p className="font-semibold text-white">{testimonial.name}</p>
+                  <p className="text-sm text-gold-400">{testimonial.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionShell>
+
+      <SectionShell className="bg-white/[0.02]">
+        <div className="section-shell">
+          <SectionHeading eyebrow="FAQ" title="Common questions answered." align="center" />
+          <div className="mt-10 max-w-3xl mx-auto">
+            <FAQ
+              items={[
+                { q: 'How do you approach new projects?', a: 'I start with discovery and strategy, understand your goals, and deliver polished work that moves the needle.' },
+                { q: 'What tech stack do you work with?', a: 'Power BI, Python, JavaScript/React, Node.js, SQL, MongoDB, and modern ML/AI frameworks.' },
+                { q: 'What are your rates?', a: 'Rates are project-based and scale with scope. Happy to discuss your budget and timeline.' },
+                { q: 'Do you offer ongoing support?', a: 'Yes, I offer retainer arrangements for long-term partnerships and continuous optimization.' }
+              ]}
+            />
+          </div>
+>>>>>>> 8269a60d1630ea7198a52f324d52f2685acf7a32
         </div>
       </SectionShell>
     </>
