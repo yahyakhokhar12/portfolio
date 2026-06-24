@@ -43,7 +43,13 @@ export default function Projects() {
       <Modal open={!!active} onClose={() => setActive(null)}>
         {active && (
           <div>
-            <img src={active.image} alt={active.title} className="h-80 w-full rounded-2xl object-cover" />
+            <div className="rounded-2xl bg-ink-950/80 p-3">
+              <img
+                src={active.image}
+                alt={active.title}
+                className={`h-80 w-full rounded-xl ${active.imageContain ? 'object-contain object-center' : 'object-cover'}`}
+              />
+            </div>
             <h3 className="mt-6 text-3xl font-semibold">{active.title}</h3>
             <p className="mt-3 text-white/70">{active.description}</p>
             <div className="mt-5 flex flex-wrap gap-2">

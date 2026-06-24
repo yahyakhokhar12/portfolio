@@ -101,6 +101,18 @@ export const projects = [
     github: 'https://github.com/yahyakhokhar12/luxury-store',
     live: 'https://luxury-store-teal.vercel.app/',
     featured: false
+  },
+  {
+    id: 8,
+    title: 'AI PDF Chatbot (RAG)',
+    category: 'AI Projects',
+    description: 'A full-stack RAG chatbot that lets users upload PDFs, ask questions about their content, and get cited answers from source passages.',
+    image: '/rag%20project.jpg',
+    imageContain: true,
+    technologies: ['FastAPI', 'LangChain', 'ChromaDB', 'Next.js', 'Tailwind CSS', 'OpenAI', 'Gemini'],
+    github: 'https://github.com/yahyakhokhar12/pdf-rag-chatbot',
+    live: null,
+    featured: true
   }
 ];
 
